@@ -1,0 +1,19 @@
+[
+	{"id": -1, "title": "Vacio",	"stackable": false,	"slug":  ""	},
+	
+	{"id": 0, 	"title": "Bloque de grass", "stackable": true,	"slug":  "grass"	},
+	
+	{"id": 1, 	"title": "Bloque de tierra",	"stackable": true,	"slug": "terra"	},
+	
+	{"id": 2,  "title": "Bloque de piedra", "stackable": true,	"slug":  "stone"	},
+	
+	{"id": 3,	"title": "Apple",	"stackable": true,	"slug":  "apple"	},
+	
+	{"id": 4,"title": "Armamento",		"stackable": true,	"slug": "armor"	},
+
+	{"id": 5,"title": "Pico",	"stackable": true,	"slug":  "axe"	},
+
+	{"id": 6,	"title": "Bolsa",	"stackable": true,	"slug":  "bag"	},
+
+	{"id": 7,	"title": "Libro",	"stackable": true,	"slug":  "libro"}
+]
