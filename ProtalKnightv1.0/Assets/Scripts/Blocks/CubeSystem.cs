@@ -32,7 +32,7 @@ public class CubeSystem : MonoBehaviour
                 {
                     Debug.Log("-----2-------");
                     var c = rh.collider.GetComponent<Cube>();
-                    if (rh.collider.GetComponent<Cube>() != null)
+                    if (rh.collider.GetComponent<Cube>() != null && inv.ItemSelected != null)
                     {
                         Debug.Log("-----3------");
                         //si es verdadero -> destruye bloque
@@ -41,29 +41,33 @@ public class CubeSystem : MonoBehaviour
                             Debug.Log("-----Destruir-------");
                             StartCoroutine(DelayedDestruction(rh.collider, c.destructionTime, c.idCube));                            
                         }
-                        else if(inv.ItemSelected != null) //si es falso -> crea un bloque en la posicion del puntero
+                        else if(inv.mode == 0) //si es falso -> crea un bloque en la posicion del puntero
                         {
                             Debug.Log("-------Construir---------");
-                            ItemData current = inv.selectedItem.transform.GetComponent<ItemData>();
-                            if (current.amount >= 1)
+                            //ItemData current = inv.selectedItem.transform.GetComponent<ItemData>();
+
+                            if (inv.currentItemData.amount >= 1)
                             {
                                 GameObject go = Instantiate(Resources.Load(inv.ItemSelected.Slug)) as GameObject;
-                                go.transform.position = rh.collider.transform.position + rh.normal;
-                                current.amount--;
-                                //data = slots[i].transform.GetChild(1).GetComponent<ItemData>();
-                                current.transform.GetChild(0).GetComponent<Text>().text = current.amount.ToString();
+                                if(go != null)
+                                {
+                                    go.transform.position = rh.collider.transform.position + rh.normal;
+                                    inv.currentItemData.amount--;
+                                    //data = slots[i].transform.GetChild(1).GetComponent<ItemData>();
+                                    inv.currentItemData.transform.GetChild(0).GetComponent<Text>().text = inv.currentItemData.amount.ToString();
+                                }
                             }
                             else
                             {
-                                Destroy(inv.slots[current.slotId].GetComponent<ItemData>());
-                                inv.items[current.slotId] = inv.database.GetComponent<ItemDatabase>().database[0];
+                                Destroy(inv.slots[inv.currentItemData.slotId].GetComponent<ItemData>());
+                                inv.items[inv.currentItemData.slotId] = inv.database.GetComponent<ItemDatabase>().database[0];
                                 //current = null;
                                 inv.ItemSelected = null;
                             }
                         }
                         else
                         {
-
+                            Debug.Log("-------Sin accion---------");
                         }
                     }
                 }

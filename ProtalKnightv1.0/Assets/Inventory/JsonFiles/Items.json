@@ -1,7 +1,7 @@
 [
 	{"id": -1, "title": "Vacio",	"stackable": false,	"slug":  ""	},
 	
-	{"id": 0, 	"title": "Bloque de grass", "stackable": true,	"slug":  "grass"	},
+	{"id": 0, 	"title": "Bloque de grass", "stackable": true,	"slug":  "grass2"	},
 	
 	{"id": 1, 	"title": "Bloque de tierra",	"stackable": true,	"slug": "terra"	},
 	
@@ -15,5 +15,7 @@
 
 	{"id": 6,	"title": "Bolsa",	"stackable": true,	"slug":  "bag"	},
 
-	{"id": 7,	"title": "Libro",	"stackable": true,	"slug":  "libro"}
+	{"id": 7,	"title": "Libro",	"stackable": true,	"slug":  "libro"},
+
+	{"id": 8,	"title": "Madera",	"stackable": true,	"slug":  "wood"}
 ]

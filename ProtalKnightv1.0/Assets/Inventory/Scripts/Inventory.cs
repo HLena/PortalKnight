@@ -16,7 +16,8 @@ public class Inventory : MonoBehaviour
 
     private bool EnabledItem = false;
     public Image selectedItem;
-    public Item ItemSelected;
+    public Item ItemSelected = null;
+    public ItemData currentItemData = null;
     public int mode; //si es falso destruye elementos / si es true construye
 
     private int totalSlotsBaul = 36;
@@ -59,7 +60,7 @@ public class Inventory : MonoBehaviour
         //AddItem(4);
         AddItem(5); // el sprite con id=5 es el 
         //  AddItem(-1);    
-        AddItem(3);
+        //AddItem(3);
     }
 
     void Update()
@@ -233,14 +234,16 @@ public class Inventory : MonoBehaviour
         {
             ItemSelected = items[x];
             selectedItem = slots[x].transform.GetChild(1).GetComponent<Image>();           
+            currentItemData = slots[x].transform.GetChild(1).GetComponent<ItemData>();
             selectedItem.rectTransform.sizeDelta = new Vector2(61, 61);            
-            Debug.Log("-------" + ItemSelected.Title);
+            //Debug.Log("-------" + ItemSelected.Title);
 
         }
         else
         {
             selectedItem.rectTransform.sizeDelta = new Vector2(41, 41);            
-            selectedItem = slots[x].transform.GetChild(1).GetComponent<Image>();            
+            selectedItem = slots[x].transform.GetChild(1).GetComponent<Image>();
+            currentItemData = slots[x].transform.GetChild(1).GetComponent<ItemData>();
             selectedItem.rectTransform.sizeDelta = new Vector2(61, 61);            
             ItemSelected = items[x];
         }
@@ -248,14 +251,14 @@ public class Inventory : MonoBehaviour
         if(ItemSelected.Id == 5)
         {
             mode = 1;
-            Debug.Log("Arma para destruir");
+            Debug.Log("Modo Destruir");
         }
         else
         {
             mode = 0;
-            Debug.Log(" modo construcion");
+            Debug.Log("Modo Construir");
         }
-        Debug.Log("--------"+mode+"--------");
+        //Debug.Log("--------"+mode+"--------");
 
 
     }
