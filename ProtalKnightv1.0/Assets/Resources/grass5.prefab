@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idCube: 0
-  destructionTime: 10
+  destructionTime: 2
 --- !u!1001 &217782449184516786
 PrefabInstance:
   m_ObjectHideFlags: 0

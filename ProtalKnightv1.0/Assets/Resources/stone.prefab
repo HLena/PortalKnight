@@ -106,7 +106,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   idCube: 2
-  destructionTime: 10
+  destructionTime: 5
 --- !u!114 &114772891162569326
 MonoBehaviour:
   m_ObjectHideFlags: 0

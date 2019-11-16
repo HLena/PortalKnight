@@ -6,16 +6,22 @@
 	{"id": 1, 	"title": "Bloque de tierra",	"stackable": true,	"slug": "terra"	},
 	
 	{"id": 2,  "title": "Bloque de piedra", "stackable": true,	"slug":  "stone"	},
+
+	{"id": 3, 	"title": "Bloque de madera", "stackable": true,	"slug":  "wood"	},
 	
-	{"id": 3,	"title": "Apple",	"stackable": true,	"slug":  "apple"	},
+	{"id": 4, 	"title": "Bloque de Piedra picada",	"stackable": true,	"slug": "chopped stone"	},
 	
-	{"id": 4,"title": "Armamento",		"stackable": true,	"slug": "armor"	},
+	{"id": 5,  "title": "Bloque de tierra pedregosa", "stackable": true,	"slug":  "stony ground"	},
+	
+	{"id": 6,	"title": "Apple",	"stackable": true,	"slug":  "apple"	},
+	
+	{"id": 7,"title": "Armamento",		"stackable": true,	"slug": "armor"	},
 
-	{"id": 5,"title": "Pico",	"stackable": true,	"slug":  "axe"	},
+	{"id": 8,"title": "Pico",	"stackable": true,	"slug":  "axe"	},
 
-	{"id": 6,	"title": "Bolsa",	"stackable": true,	"slug":  "bag"	},
+	{"id": 9,	"title": "Bolsa",	"stackable": true,	"slug":  "bag"	},
 
-	{"id": 7,	"title": "Libro",	"stackable": true,	"slug":  "libro"},
+	{"id": 10,	"title": "Libro",	"stackable": true,	"slug":  "libro"},
 
-	{"id": 8,	"title": "Madera",	"stackable": true,	"slug":  "wood"}
+	{"id": 11,	"title": "Palos de madera",	"stackable": true,	"slug":  "wood sticks"}
 ]

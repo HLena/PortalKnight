@@ -105,5 +105,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9aff36530ec7d8439a2ab6a0ac1c189, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idCube: 8
-  destructionTime: 10
+  idCube: 11
+  destructionTime: 2

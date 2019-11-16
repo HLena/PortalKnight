@@ -22,6 +22,7 @@ public class Inventory : MonoBehaviour
 
     private int totalSlotsBaul = 36;
     private int totalSlotsCinturon = 9;
+    //public List<Item> items = new List<Item>();
     public List<Item> items = new List<Item>();
     public List<GameObject> slots = new List<GameObject>();
 
@@ -58,9 +59,35 @@ public class Inventory : MonoBehaviour
         }
 
         //AddItem(4);
-        AddItem(5); // el sprite con id=5 es el 
+        //AddItem(5); // el sprite con id=5 es el 
         //  AddItem(-1);    
-        //AddItem(3);
+        AddItem(8);
+        AddItem(3);
+        AddItem(3);
+        AddItem(3);
+        AddItem(3);
+        AddItem(3);
+        AddItem(3);
+        AddItem(3);
+        AddItem(4);
+        AddItem(4);
+        AddItem(4);
+        AddItem(4);
+        AddItem(4);
+        AddItem(4);
+        AddItem(5);
+        AddItem(5);
+        AddItem(5);
+        AddItem(5);
+        AddItem(5);
+        AddItem(5);
+        //AddItem(11);
+
+        ItemSelected = items[0];
+        selectedItem = slots[0].transform.GetChild(1).GetComponent<Image>();
+        currentItemData = slots[0].transform.GetChild(1).GetComponent<ItemData>();
+        selectedItem.rectTransform.sizeDelta = new Vector2(61, 61);
+        mode = 1;
     }
 
     void Update()
@@ -230,7 +257,7 @@ public class Inventory : MonoBehaviour
     void UseItemsOfInventory(int x)
     {
         //playsound.Play();            
-        if (selectedItem == null)
+        /*if (selectedItem == null)
         {
             ItemSelected = items[x];
             selectedItem = slots[x].transform.GetChild(1).GetComponent<Image>();           
@@ -246,9 +273,14 @@ public class Inventory : MonoBehaviour
             currentItemData = slots[x].transform.GetChild(1).GetComponent<ItemData>();
             selectedItem.rectTransform.sizeDelta = new Vector2(61, 61);            
             ItemSelected = items[x];
-        }
+        }*/
+        selectedItem.rectTransform.sizeDelta = new Vector2(41, 41);
+        selectedItem = slots[x].transform.GetChild(1).GetComponent<Image>();
+        currentItemData = slots[x].transform.GetChild(1).GetComponent<ItemData>();
+        selectedItem.rectTransform.sizeDelta = new Vector2(61, 61);
+        ItemSelected = items[x];
 
-        if(ItemSelected.Id == 5)
+        if (ItemSelected.Id == 8)
         {
             mode = 1;
             Debug.Log("Modo Destruir");
